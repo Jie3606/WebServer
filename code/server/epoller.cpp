@@ -7,6 +7,7 @@ Epoller::Epoller(int maxEvent) : epollfd_(epoll_create(maxEvent)), events_(maxEv
 Epoller::~Epoller()
 {
     close(epollfd_);
+    
 }
 
 bool Epoller::addFd(int fd, uint32_t events)
